@@ -3,10 +3,11 @@ package esercizio2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> lista = listaOrdinata(6, 7, 5, 8, 10, 1, 101);
+        List<Integer> lista = listaOrdinata(6);
         System.out.println("Lista ordinata: " + lista);
 
         List<Integer> listaInversa = listaInvertita(lista);
@@ -16,14 +17,12 @@ public class Main {
         listaPariDispari(listaPariODispari, true);
     }
 
-    public static List<Integer> listaOrdinata(int... numeri) {
+    public static List<Integer> listaOrdinata(int N) {
         List<Integer> listaNumeri = new ArrayList<>();
-        for (int numero : numeri) {
-            if (numero <= 100) {
-                listaNumeri.add(numero);
-            } else {
-                System.out.println(numero + " ignorato perché maggiore di 100.");
-            }
+        int numero;
+        for (int i = 0; i < N; i++) {
+            numero = (int) (Math.random() * 101) + 1;
+            listaNumeri.add(numero);
         }
         Collections.sort(listaNumeri);
         return listaNumeri;

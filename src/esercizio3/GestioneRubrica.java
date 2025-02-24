@@ -16,7 +16,7 @@ public class GestioneRubrica {
         System.out.println(rubrica);
         ricercaConNumero(rubrica, 333454578);
         System.out.println(rubrica);
-        ricercaConNome(rubrica, "Francois");
+
     }
 
     public static void inserimentoInRubrica(Map<String, Integer> rubrica, String nome, int numero) {
